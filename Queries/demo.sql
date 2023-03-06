@@ -23,6 +23,26 @@ WHERE SALARY >= 5000 AND SALARY <= 10000;
 SELECT FIRST_NAME, LAST_NAME, SALARY FROM EMPLOYEES
 WHERE SALARY BETWEEN 5000 AND 10000;
 
+select  * from EMPLOYEES where EMPLOYEE_ID between 130 and 170;
+
+select * from EMPLOYEES where EMPLOYEE_ID = 135 or EMPLOYEE_ID = 176 or EMPLOYEE_ID = 154 or
+                              EMPLOYEE_ID = 129;
+
+select *
+from EMPLOYEES
+where EMPLOYEE_ID in(135, 176,154,129); -- all info of employee with id 135,176,154,129
+
+--get me city where country_id IT,US,UK
+
+SELECT CITY FROM LOCATIONS WHERE COUNTRY_ID IN ('US', 'UK', 'IT');
+
+
+
+
+
+
+
+
 
 
 

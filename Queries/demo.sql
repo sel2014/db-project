@@ -36,6 +36,33 @@ where EMPLOYEE_ID in(135, 176,154,129); -- all info of employee with id 135,176,
 
 SELECT CITY FROM LOCATIONS WHERE COUNTRY_ID IN ('US', 'UK', 'IT');
 
+--get me info who is working as IT_PROG or SA_REP
+SELECT * FROM EMPLOYEES
+WHERE JOB_ID IN ('IT_PROG', 'SA_REP');
+
+--how many employee working as IT_PROG OR SA_REP
+select count(*) from EMPLOYEES
+WHERE JOB_ID IN ('IT_PROG', 'SA_REP');
+
+--how many employees making more than 8000?
+
+select count(*) from EMPLOYEES
+where SALARY >8000;
+
+--how many unique first names do we have?
+select count(distinct   FIRST_NAME) from EMPLOYEES;
+
+--get me all employees info based on who is making more salary to low salary?
+
+select * from EMPLOYEES
+order by SALARY desc ;
+
+--get me all employees info based on firstname
+
+select * from EMPLOYEES
+order by FIRST_NAME;     --default order is asc
+
+
 
 
 

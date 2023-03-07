@@ -62,6 +62,32 @@ order by SALARY desc ;
 select * from EMPLOYEES
 order by FIRST_NAME;     --default order is asc
 
+--all employee names that start wih c
+select * from EMPLOYEES
+where FIRST_NAME like 'C%';
+
+--name starts with  C and is 5 characters long
+
+select * from EMPLOYEES
+    where FIRST_NAME like 'C____';
+
+SELECT * FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '__z__';
+
+--firs names with second character is 'u'
+select * from EMPLOYEES
+where FIRST_NAME like '_u%';
+
+--min salary
+select min(SALARY) from EMPLOYEES;
+select max(SALARY) from EMPLOYEES;
+
+--round with two decimals
+select round(avg(SALARY),2) from EMPLOYEES;
+
+--total salaries
+select sum(SALARY) from EMPLOYEES;
+
 
 
 
